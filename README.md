@@ -5,12 +5,12 @@
 2. [*sudo*](#sudo)
     - [Step 1: Installing *sudo*](#step-1-installing-sudo)
     - [Step 2: Adding User to *sudo* Group](#step-2-adding-user-to-sudo-group)
-    - [Step 3: Running *root*-Privileged Commands](#step-3-running-root-privileged-commands)
+    - [Step 3: Running *root*-Prinanoleged Commands](#step-3-running-root-prinanoleged-commands)
     - [Step 4: Configuring *sudo*](#step-4-configuring-sudo)
 3. [SSH](#ssh)
     - [Step 1: Installing & Configuring SSH](#step-1-installing--configuring-ssh)
     - [Step 2: Installing & Configuring UFW](#step-2-installing--configuring-ufw)
-    - [Step 3: Connecting to Server via SSH](#step-3-connecting-to-server-via-ssh)
+    - [Step 3: Connecting to Server nanoa SSH](#step-3-connecting-to-server-nanoa-ssh)
 4. [User Management](#user-management)
     - [Step 1: Setting Up a Strong Password Policy](#step-1-setting-up-a-strong-password-policy)
        - [Password Age](#password-age)
@@ -29,7 +29,7 @@
        - [Step 5: Configuring Lighttpd](#step-5-configuring-lighttpd)
     - [File Transfer Protocol *(FTP)*](#3-file-transfer-protocol-ftp)
        - [Step 1: Installing & Configuring FTP](#step-1-installing--configuring-ftp)
-       - [Step 2: Connecting to Server via FTP](#step-2-connecting-to-server-via-ftp)
+       - [Step 2: Connecting to Server nanoa FTP](#step-2-connecting-to-server-nanoa-ftp)
 
 ## Installation
 At the time of writing, the latest stable version of [Debian](https://www.debian.org) is *Debian 10 Buster*. Watch *bonus* installation walkthrough *(no audio)* [here](https://youtu.be/2w-2MX5QrQw).
@@ -37,35 +37,35 @@ At the time of writing, the latest stable version of [Debian](https://www.debian
 ## *sudo*
 
 ### Step 1: Installing *sudo*
-Switch to *root* and its environment via `su -`.
+Switch to *root* and its ennanoronment nanoa `su -`.
 ```
-$ su -
+su -
 Password:
 #
 ```
-Install *sudo* via `apt install sudo`.
+Install *sudo* nanoa `apt install sudo`.
 ```
-# apt install sudo
+apt install sudo
 ```
-Verify whether *sudo* was successfully installed via `dpkg -l | grep sudo`.
+Verify whether *sudo* was successfully installed nanoa `dpkg -l | grep sudo`.
 ```
-# dpkg -l | grep sudo
+dpkg -l | grep sudo
 ```
 
 ### Step 2: Adding User to *sudo* Group
-Add user to *sudo* group via `adduser <username> sudo`.
+Add user to *sudo* group nanoa `adduser <username> sudo`.
 ```
-# adduser <username> sudo
+adduser <username> sudo
 ```
->Alternatively, add user to *sudo* group via `usermod -aG sudo <username>`.
+>Alternatively, add user to *sudo* group nanoa `usermod -aG sudo <username>`.
 >```
-># usermod -aG sudo <username>
+>usermod -aG sudo <username>
 >```
-Verify whether user was successfully added to *sudo* group via `getent group sudo`.
+Verify whether user was successfully added to *sudo* group nanoa `getent group sudo`.
 ```
-$ getent group sudo
+getent group sudo
 ```
-`reboot` for changes to take effect, then log in and verify *sudopowers* via `sudo -v`.
+`reboot` for changes to take effect, then log in and verify *sudopowers* nanoa `sudo -v`.
 ```
 # reboot
 <--->
@@ -74,20 +74,20 @@ Debian GNU/Linux 10 <hostname> tty1
 <hostname> login: <username>
 Password: <password>
 <--->
-$ sudo -v
+sudo -v
 [sudo] password for <username>: <password>
 ```
 
-### Step 3: Running *root*-Privileged Commands
-From here on out, run *root*-privileged commands via prefix `sudo`. For instance:
+### Step 3: Running *root*-Prinanoleged Commands
+From here on out, run *root*-prinanoleged commands nanoa prefix `sudo`. For instance:
 ```
-$ sudo apt update
+sudo apt update
 ```
 
 ### Step 4: Configuring *sudo*
-Configure *sudo* via `sudo vi /etc/sudoers.d/<filename>`. `<filename>` shall not end in `~` or contain `.`.
+Configure *sudo* nanoa `sudo nano /etc/sudoers.d/<filename>`. `<filename>` shall not end in `~` or contain `.`.
 ```
-$ sudo vi /etc/sudoers.d/<filename>
+sudo nano /etc/sudoers.d/<filename>
 ```
 To limit authentication using *sudo* to 3 attempts *(defaults to 3 anyway)* in the event of an incorrect password, add below line to the file.
 ```
@@ -100,7 +100,7 @@ Defaults        badpass_message="<custom-error-message>"
 ###
 To log all *sudo* commands to `/var/log/sudo/<filename>`:
 ```
-$ sudo mkdir /var/log/sudo
+sudo mkdir /var/log/sudo
 <~~~>
 Defaults        logfile="/var/log/sudo/<filename>"
 <~~~>
@@ -122,17 +122,17 @@ Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
 ## SSH
 
 ### Step 1: Installing & Configuring SSH
-Install *openssh-server* via `sudo apt install openssh-server`.
+Install *openssh-server* nanoa `sudo apt install openssh-server`.
 ```
-$ sudo apt install openssh-server
+sudo apt install openssh-server
 ```
-Verify whether *openssh-server* was successfully installed via `dpkg -l | grep ssh`.
+Verify whether *openssh-server* was successfully installed nanoa `dpkg -l | grep ssh`.
 ```
-$ dpkg -l | grep ssh
+dpkg -l | grep ssh
 ```
-Configure SSH via `sudo vi /etc/ssh/sshd_config`.
+Configure SSH nanoa `sudo nano /etc/ssh/sshd_config`.
 ```
-$ sudo vi /etc/ssh/sshd_config
+sudo nano /etc/ssh/sshd_config
 ```
 To set up SSH using Port 4242, replace below line:
 ```
@@ -150,49 +150,49 @@ with:
 ```
 32 PermitRootLogin no
 ```
-Check SSH status via `sudo service ssh status`.
+Check SSH status nanoa `sudo sernanoce ssh status`.
 ```
-$ sudo service ssh status
+sudo sernanoce ssh status
 ```
->Alternatively, check SSH status via `systemctl status ssh`.
+>Alternatively, check SSH status nanoa `systemctl status ssh`.
 >```
->$ systemctl status ssh
+> systemctl status ssh
 >```
 
 ### Step 2: Installing & Configuring UFW
-Install *ufw* via `sudo apt install ufw`.
+Install *ufw* nanoa `sudo apt install ufw`.
 ```
-$ sudo apt install ufw
+sudo apt install ufw
 ```
-Verify whether *ufw* was successfully installed via `dpkg -l | grep ufw`.
+Verify whether *ufw* was successfully installed nanoa `dpkg -l | grep ufw`.
 ```
-$ dpkg -l | grep ufw
+dpkg -l | grep ufw
 ```
-Enable Firewall via `sudo ufw enable`.
+Enable Firewall nanoa `sudo ufw enable`.
 ```
-$ sudo ufw enable
+sudo ufw enable
 ```
-Allow incoming connections using Port 4242 via `sudo ufw allow 4242`.
+Allow incoming connections using Port 4242 nanoa `sudo ufw allow 4242`.
 ```
-$ sudo ufw allow 4242
+sudo ufw allow 4242
 ```
-Check UFW status via `sudo ufw status`.
+Check UFW status nanoa `sudo ufw status`.
 ```
-$ sudo ufw status
+sudo ufw status
 ```
 
-### Step 3: Connecting to Server via SSH
-SSH into your virtual machine using Port 4242 via `ssh <username>@<ip-address> -p 4242`.
+### Step 3: Connecting to Server nanoa SSH
+SSH into your nanortual machine using Port 4242 nanoa `ssh <username>@<ip-address> -p 4242`.
 ```
-$ ssh <username>@<ip-address> -p 4242
+ssh <username>@<ip-address> -p 4242
 ```
-Terminate SSH session at any time via `logout`.
+Terminate SSH session at any time nanoa `logout`.
 ```
-$ logout
+logout
 ```
->Alternatively, terminate SSH session via `exit`.
+>Alternatively, terminate SSH session nanoa `exit`.
 >```
->$ exit
+>exit
 >```
 
 ## User Management
@@ -200,9 +200,9 @@ $ logout
 ### Step 1: Setting Up a Strong Password Policy
 
 #### Password Age
-Configure password age policy via `sudo vi /etc/login.defs`.
+Configure password age policy nanoa `sudo nano /etc/login.defs`.
 ```
-$ sudo vi /etc/login.defs
+sudo nano /etc/login.defs
 ```
 To set password to expire every 30 days, replace below line
 ```
@@ -228,15 +228,15 @@ To send user a warning message 7 days *(defaults to 7 anyway)* before password e
 #### Password Strength
 Secondly, to set up policies in relation to password strength, install the *libpam-pwquality* package.
 ```
-$ sudo apt install libpam-pwquality
+sudo apt install libpam-pwquality
 ```
-Verify whether *libpam-pwquality* was successfully installed via `dpkg -l | grep libpam-pwquality`.
+Verify whether *libpam-pwquality* was successfully installed nanoa `dpkg -l | grep libpam-pwquality`.
 ```
-$ dpkg -l | grep libpam-pwquality
+dpkg -l | grep libpam-pwquality
 ```
-Configure password strength policy via `sudo vi /etc/pam.d/common-password`, specifically the below line:
+Configure password strength policy nanoa `sudo nano /etc/pam.d/common-password`, specifically the below line:
 ```
-$ sudo vi /etc/pam.d/common-password
+sudo nano /etc/pam.d/common-password
 <~~~>
 25 password        requisite                       pam_pwquality.so retry=3
 <~~~>
@@ -271,17 +271,17 @@ password        requisite                       pam_pwquality.so retry=3 minlen=
 ```
 
 ### Step 2: Creating a New User
-Create new user via `sudo adduser <username>`.
+Create new user nanoa `sudo adduser <username>`.
 ```
-$ sudo adduser <username>
+sudo adduser <username>
 ```
-Verify whether user was successfully created via `getent passwd <username>`.
+Verify whether user was successfully created nanoa `getent passwd <username>`.
 ```
-$ getent passwd <username>
+getent passwd <username>
 ```
-Verify newly-created user's password expiry information via `sudo chage -l <username>`.
+Verify newly-created user's password expiry information nanoa `sudo chage -l <username>`.
 ```
-$ sudo chage -l <username>
+sudo chage -l <username>
 Last password change					: <last-password-change-date>
 Password expires					: <last-password-change-date + PASS_MAX_DAYS>
 Password inactive					: never
@@ -292,29 +292,29 @@ Number of days of warning before password expires	: <PASS_WARN_AGE>
 ```
 
 ### Step 3: Creating a New Group
-Create new *user42* group via `sudo addgroup user42`.
+Create new *user42* group nanoa `sudo addgroup user42`.
 ```
-$ sudo addgroup user42
+sudo addgroup user42
 ```
-Add user to *user42* group via `sudo adduser <username> user42`.
+Add user to *user42* group nanoa `sudo adduser <username> user42`.
 ```
-$ sudo adduser <username> user42
+sudo adduser <username> user42
 ```
->Alternatively, add user to *user42* group via `sudo usermod -aG user42 <username>`.
+>Alternatively, add user to *user42* group nanoa `sudo usermod -aG user42 <username>`.
 >```
->$ sudo usermod -aG user42 <username>
+>sudo usermod -aG user42 <username>
 >```
-Verify whether user was successfully added to *user42* group via `getent group user42`.
+Verify whether user was successfully added to *user42* group nanoa `getent group user42`.
 ```
-$ getent group user42
+getent group user42
 ```
 
 ## *cron*
 
 ### Setting Up a *cron* Job
-Configure *cron* as *root* via `sudo crontab -u root -e`.
+Configure *cron* as *root* nanoa `sudo crontab -u root -e`.
 ```
-$ sudo crontab -u root -e
+sudo crontab -u root -e
 ```
 To schedule a shell script to run every 10 minutes, replace below line
 ```
@@ -324,9 +324,9 @@ with:
 ```
 23 */10 * * * * sh /path/to/script
 ```
-Check *root*'s scheduled *cron* jobs via `sudo crontab -u root -l`.
+Check *root*'s scheduled *cron* jobs nanoa `sudo crontab -u root -l`.
 ```
-$ sudo crontab -u root -l
+sudo crontab -u root -l
 ```
 
 ## Bonus
@@ -337,66 +337,66 @@ Watch *bonus* installation walkthrough *(no audio)* [here](https://youtu.be/2w-2
 ### #2: Linux Lighttpd MariaDB PHP *(LLMP)* Stack
 
 #### Step 1: Installing Lighttpd
-Install *lighttpd* via `sudo apt install lighttpd`.
+Install *lighttpd* nanoa `sudo apt install lighttpd`.
 ```
-$ sudo apt install lighttpd
+sudo apt install lighttpd
 ```
-Verify whether *lighttpd* was successfully installed via `dpkg -l | grep lighttpd`.
+Verify whether *lighttpd* was successfully installed nanoa `dpkg -l | grep lighttpd`.
 ```
-$ dpkg -l | grep lighttpd
+dpkg -l | grep lighttpd
 ```
-Allow incoming connections using Port 80 via `sudo ufw allow 80`.
+Allow incoming connections using Port 80 nanoa `sudo ufw allow 80`.
 ```
-$ sudo ufw allow 80
+sudo ufw allow 80
 ```
 
 #### Step 2: Installing & Configuring MariaDB
-Install *mariadb-server* via `sudo apt install mariadb-server`.
+Install *mariadb-server* nanoa `sudo apt install mariadb-server`.
 ```
-$ sudo apt install mariadb-server
+sudo apt install mariadb-server
 ```
-Verify whether *mariadb-server* was successfully installed via `dpkg -l | grep mariadb-server`.
+Verify whether *mariadb-server* was successfully installed nanoa `dpkg -l | grep mariadb-server`.
 ```
-$ dpkg -l | grep mariadb-server
+dpkg -l | grep mariadb-server
 ```
-Start interactive script to remove insecure default settings via `sudo mysql_secure_installation`.
+Start interactive script to remove insecure default settings nanoa `sudo mysql_secure_installation`.
 ```
-$ sudo mysql_secure_installation
+sudo mysql_secure_installation
 Enter current password for root (enter for none): #Just press Enter (do not confuse database root with system root)
 Set root password? [Y/n] n
 Remove anonymous users? [Y/n] Y
 Disallow root login remotely? [Y/n] Y
 Remove test database and access to it? [Y/n] Y
-Reload privilege tables now? [Y/n] Y
+Reload prinanolege tables now? [Y/n] Y
 ```
-Log in to the MariaDB console via `sudo mariadb`.
+Log in to the MariaDB console nanoa `sudo mariadb`.
 ```
-$ sudo mariadb
+sudo mariadb
 MariaDB [(none)]>
 ```
-Create new database via `CREATE DATABASE <database-name>;`.
+Create new database nanoa `CREATE DATABASE <database-name>;`.
 ```
 MariaDB [(none)]> CREATE DATABASE <database-name>;
 ```
-Create new database user and grant them full privileges on the newly-created database via `GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;`.
+Create new database user and grant them full prinanoleges on the newly-created database nanoa `GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;`.
 ```
 MariaDB [(none)]> GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;
 ```
-Flush the privileges via `FLUSH PRIVILEGES;`.
+Flush the prinanoleges nanoa `FLUSH PRInanoLEGES;`.
 ```
-MariaDB [(none)]> FLUSH PRIVILEGES;
+MariaDB [(none)]> FLUSH PRInanoLEGES;
 ```
-Exit the MariaDB shell via `exit`.
+Exit the MariaDB shell nanoa `exit`.
 ```
 MariaDB [(none)]> exit
 ```
-Verify whether database user was successfully created by logging in to the MariaDB console via `mariadb -u <username-2> -p`.
+Verify whether database user was successfully created by logging in to the MariaDB console nanoa `mariadb -u <username-2> -p`.
 ```
-$ mariadb -u <username-2> -p
+mariadb -u <username-2> -p
 Enter password: <password-2>
 MariaDB [(none)]>
 ```
-Confirm whether database user has access to the database via `SHOW DATABASES;`.
+Confirm whether database user has access to the database nanoa `SHOW DATABASES;`.
 ```
 MariaDB [(none)]> SHOW DATABASES;
 +--------------------+
@@ -406,53 +406,53 @@ MariaDB [(none)]> SHOW DATABASES;
 | information_schema |
 +--------------------+
 ```
-Exit the MariaDB shell via `exit`.
+Exit the MariaDB shell nanoa `exit`.
 ```
 MariaDB [(none)]> exit
 ```
 
 #### Step 3: Installing PHP
-Install *php-cgi* & *php-mysql* via `sudo apt install php-cgi php-mysql`.
+Install *php-cgi* & *php-mysql* nanoa `sudo apt install php-cgi php-mysql`.
 ```
-$ sudo apt install php-cgi php-mysql
+sudo apt install php-cgi php-mysql
 ```
-Verify whether *php-cgi* & *php-mysql* was successfully installed via `dpkg -l | grep php`.
+Verify whether *php-cgi* & *php-mysql* was successfully installed nanoa `dpkg -l | grep php`.
 ```
-$ dpkg -l | grep php
+dpkg -l | grep php
 ```
 
 #### Step 4: Downloading & Configuring WordPress
-Install *wget* via `sudo apt install wget`.
+Install *wget* nanoa `sudo apt install wget`.
 ```
-$ sudo apt install wget
+sudo apt install wget
 ```
-Download WordPress to `/var/www/html` via `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html`.
+Download WordPress to `/var/www/html` nanoa `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html`.
 ```
-$ sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html
+sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html
 ```
-Extract downloaded content via `sudo tar -xzvf /var/www/html/latest.tar.gz`.
+Extract downloaded content nanoa `sudo tar -xzvf /var/www/html/latest.tar.gz`.
 ```
-$ sudo tar -xzvf /var/www/html/latest.tar.gz
+sudo tar -xzvf /var/www/html/latest.tar.gz
 ```
-Remove tarball via `sudo rm /var/www/html/latest.tar.gz`.
+Remove tarball nanoa `sudo rm /var/www/html/latest.tar.gz`.
 ```
-$ sudo rm /var/www/html/latest.tar.gz
+sudo rm /var/www/html/latest.tar.gz
 ```
-Copy content of `/var/www/html/wordpress` to `/var/www/html` via `sudo cp -r /var/www/html/wordpress/* /var/www/html`.
+Copy content of `/var/www/html/wordpress` to `/var/www/html` nanoa `sudo cp -r /var/www/html/wordpress/* /var/www/html`.
 ```
-$ sudo cp -r /var/www/html/wordpress/* /var/www/html
+sudo cp -r /var/www/html/wordpress/* /var/www/html
 ```
-Remove `/var/www/html/wordpress` via `sudo rm -rf /var/www/html/wordpress`
+Remove `/var/www/html/wordpress` nanoa `sudo rm -rf /var/www/html/wordpress`
 ```
-$ sudo rm -rf /var/www/html/wordpress
+sudo rm -rf /var/www/html/wordpress
 ```
-Create WordPress configuration file from its sample via `sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php`.
+Create WordPress configuration file from its sample nanoa `sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php`.
 ```
-$ sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
+sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
 ```
-Configure WordPress to reference previously-created MariaDB database & user via `sudo vi /var/www/html/wp-config.php`.
+Configure WordPress to reference prenanoously-created MariaDB database & user nanoa `sudo nano /var/www/html/wp-config.php`.
 ```
-$ sudo vi /var/www/html/wp-config.php
+sudo nano /var/www/html/wp-config.php
 ```
 Replace the below
 ```
@@ -468,31 +468,31 @@ with:
 ```
 
 #### Step 5: Configuring Lighttpd
-Enable below modules via `sudo lighty-enable-mod fastcgi; sudo lighty-enable-mod fastcgi-php; sudo service lighttpd force-reload`.
+Enable below modules nanoa `sudo lighty-enable-mod fastcgi; sudo lighty-enable-mod fastcgi-php; sudo sernanoce lighttpd force-reload`.
 ```
-$ sudo lighty-enable-mod fastcgi
-$ sudo lighty-enable-mod fastcgi-php
-$ sudo service lighttpd force-reload
+sudo lighty-enable-mod fastcgi
+sudo lighty-enable-mod fastcgi-php
+sudo sernanoce lighttpd force-reload
 ```
 
 ### #3: File Transfer Protocol *(FTP)*
 
 #### Step 1: Installing & Configuring FTP
-Install FTP via `sudo apt install vsftpd`.
+Install FTP nanoa `sudo apt install vsftpd`.
 ```
-$ sudo apt install vsftpd
+sudo apt install vsftpd
 ```
-Verify whether *vsftpd* was successfully installed via `dpkg -l | grep vsftpd`.
+Verify whether *vsftpd* was successfully installed nanoa `dpkg -l | grep vsftpd`.
 ```
-$ dpkg -l | grep vsftpd
+dpkg -l | grep vsftpd
 ```
-Allow incoming connections using Port 21 via `sudo ufw allow 21`.
+Allow incoming connections using Port 21 nanoa `sudo ufw allow 21`.
 ```
-$ sudo ufw allow 21
+sudo ufw allow 21
 ```
-Configure *vsftpd* via `sudo vi /etc/vsftpd.conf`.
+Configure *vsftpd* nanoa `sudo nano /etc/vsftpd.conf`.
 ```
-$ sudo vi /etc/vsftpd.conf
+sudo nano /etc/vsftpd.conf
 ```
 To enable any form of FTP write command, uncomment below line:
 ```
@@ -500,10 +500,10 @@ To enable any form of FTP write command, uncomment below line:
 ```
 To set root folder for FTP-connected user to `/home/<username>/ftp`, add below lines:
 ```
-$ sudo mkdir /home/<username>/ftp
-$ sudo mkdir /home/<username>/ftp/files
-$ sudo chown nobody:nogroup /home/<username>/ftp
-$ sudo chmod a-w /home/<username>/ftp
+sudo mkdir /home/<username>/ftp
+sudo mkdir /home/<username>/ftp/files
+sudo chown nobody:nogroup /home/<username>/ftp
+sudo chmod a-w /home/<username>/ftp
 <~~~>
 user_sub_token=$USER
 local_root=/home/$USER/ftp
@@ -515,8 +515,8 @@ To prevent user from accessing files or using commands outside the directory tre
 ```
 To whitelist FTP, add below lines:
 ```
-$ sudo vi /etc/vsftpd.userlist
-$ echo <username> | sudo tee -a /etc/vsftpd.userlist
+sudo nano /etc/vsftpd.userlist
+echo <username> | sudo tee -a /etc/vsftpd.userlist
 <~~~>
 userlist_enable=YES
 userlist_file=/etc/vsftpd.userlist
@@ -524,9 +524,9 @@ userlist_deny=NO
 <~~~>
 ```
 
-#### Step 2: Connecting to Server via FTP
-FTP into your virtual machine via `ftp <ip-address>`.
+#### Step 2: Connecting to Server nanoa FTP
+FTP into your nanortual machine nanoa `ftp <ip-address>`.
 ```
-$ ftp <ip-address>
+ftp <ip-address>
 ```
-Terminate FTP session at any time via `CTRL + D`.
+Terminate FTP session at any time nanoa `CTRL + D`.
