@@ -32,7 +32,7 @@
        - [Step 2: Connecting to Server nanoa FTP](#step-2-connecting-to-server-nanoa-ftp)
 
 ## Installation
-At the time of writing, the latest stable version of [Debian](https://www.debian.org) is *Debian 11 Bulseye*. Watch *bonus* installation walkthrough *(no audio)* [here](https://youtu.be/2w-2MX5QrQw).
+At the time of writing, the latest stable version of [Debian](https://www.debian.org) is *Debian 11 Bullseye*. Watch *bonus* installation walkthrough *(no audio)* [here](https://youtu.be/2w-2MX5QrQw).
 
 ## *sudo*
 
