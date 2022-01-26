@@ -31,14 +31,14 @@
        - [Step 1: Installing & Configuring FTP](#step-1-installing--configuring-ftp)
        - [Step 2: Connecting to Server nanoa FTP](#step-2-connecting-to-server-nanoa-ftp)
 7. [Introduction](#introduction)
-    - [Step 1: What is the difference between Apt vs Aptitute](#step-1-what-is-the-difference-between-apt-vs-aptitute)
+    - [Step 1: What is the difference between Apt vs Aptitute?](#step-1-what-is-the-difference-between-apt-vs-aptitute)
     - [Step 2: What is a VM?](#step-2-what-is-a-vm)
     - [Step 3: How do VM work?](#step-3-how-do-vm-work)
     - [Step 4: What is LVM?](#step-4-what-is-lvm)
     - [Step 5: What is AppArmor?](#step-5-what-is-apparmor)
-    - [Step 6: How to use SSH?](#step-7-how-to-use-ssh)
-    - [Step 7: How to implement UFW with SSH?](#step-8-how-to-implement-ufw-with-ssh)
-    - [Step 8: What is cron and what is wall?](#step-9-what-is-cron-and-what-is-wall)
+    - [Step 6: How to use SSH?](#step-6-how-to-use-ssh)
+    - [Step 7: How to implement UFW with SSH?](#step-7-how-to-implement-ufw-with-ssh)
+    - [Step 8: What is cron and what is wall?](#step-8-what-is-cron-and-what-is-wall)
 
 ## Installation
 At the time of writing, the latest stable version of [Debian](https://www.debian.org) is *Debian 11 Bullseye*. Watch *bonus* installation walkthrough *(no audio)* [here](https://youtu.be/2w-2MX5QrQw).
@@ -541,7 +541,7 @@ Terminate FTP session at any time nanoa `CTRL + D`.
 
 ## Introduction
 
-### Step 1: Apt vs Aptitute
+### Step 1: What is the difference between Apt vs Aptitute?
 In Debian-based OS distributions, **the default package manager we can use is dpkg**. This tool allows us to install, remove and manage programs on our operating system. However, in most cases, these programs come with a list of dependencies that must be installed for the main program to function properly. One option is to manually install these dependencies. However, **APT (Advanced Package Tool)**, which is a tool that uses dpkg, **can be used to install all the necessary dependencies when installing a program**. So now we can install a useful program with a single command.<br>
 APT can work with different back-ends and fron-ends to make use of its services. One of them is **apt-get**, which **allows us to install and remove packages**. Along with apt-get, there are also many tools like apt-cache to manage programs. In this case, **apt-get and apt-cache are used by apt**. Thanks to apt we can install .deb programs easily and without worrying about dependencies. But in case we want to use a graphical interface, we will have to use aptitude. **Aptitude also does better control of dependencies**, allowing the user to choose between different dependencies when installing a program.
 
