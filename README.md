@@ -39,7 +39,7 @@
     - [Step 6: How to use SSH?](#step-7-how-to-use-ssh)
     - [Step 7: How to implement UFW with SSH?](#step-8-how-to-implement-ufw-with-ssh)
     - [Step 8: What is cron and what is wall?](#step-9-what-is-cron-and-what-is-wall)
-    - 
+
 ## Installation
 At the time of writing, the latest stable version of [Debian](https://www.debian.org) is *Debian 11 Bullseye*. Watch *bonus* installation walkthrough *(no audio)* [here](https://youtu.be/2w-2MX5QrQw).
 
