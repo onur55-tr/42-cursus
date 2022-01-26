@@ -30,7 +30,7 @@
     - [File Transfer Protocol *(FTP)*](#3-file-transfer-protocol-ftp)
        - [Step 1: Installing & Configuring FTP](#step-1-installing--configuring-ftp)
        - [Step 2: Connecting to Server nanoa FTP](#step-2-connecting-to-server-nanoa-ftp)
-7.[Introduction](#introduction)
+7. [Introduction](#introduction)
     - [What is the difference between Apt vs Aptitute](#apt-aptitute)
     - [What is a VM?](#what-is-vm)
     - [How do VM work?](#how-to-vm-work)
