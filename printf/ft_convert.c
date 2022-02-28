@@ -77,7 +77,6 @@ int	ft_pointer(unsigned long num, int *s)
 
 int	ft_uns(unsigned int number, int *s)
 {
-
 	if (number >= 0 && number <= 9)
 		*s += ft_putchar(number + 48);
 	if (number > 9)
