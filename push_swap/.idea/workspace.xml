@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="push_swap" targetName="all" />
+      <config projectName="push_swap" targetName="fclean" />
+      <config projectName="push_swap" targetName="re" />
+      <config projectName="push_swap" targetName="norminette" />
+      <config projectName="push_swap" targetName="compile" />
+      <config projectName="push_swap" targetName="bonus" />
+      <config projectName="push_swap" targetName="push_swap" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7db53034-54c2-45d7-93f4-e16b581d6846" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Gnl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_atoi.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_bzero.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_calloc.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_isalnum.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_isalpha.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_isascii.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_isdigit.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_isprint.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_itoa.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_memchr.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_memcmp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_memcpy.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_memmove.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_memset.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_putchar_fd.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_putendl_fd.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_putnbr_fd.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_putstr_fd.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_split.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strchr.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strdup.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_striteri.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strjoin.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strlcat.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strlcpy.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strlen.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strmapi.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strncmp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strnstr.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strrchr.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_strtrim.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_substr.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_tolower.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/ft_toupper.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libft/libft.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Printf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/args_alignment.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/args_alignment_together.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/args_check.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/args_list.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/error.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ft_atoi.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/func.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/list.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/list2.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/main.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/push_swap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/push_swap.dSYM/Contents/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/push_swap.dSYM/Contents/Resources/DWARF/push_swap" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="xlcaheev" />
+  </component>
+  <component name="MakefileLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="push_swap" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="push_swap" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="$PROJECT_DIR$/Source/args_check.c" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28hrQqF487NUvzeMoEKisTTUlDI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/odursun/Desktop/push_swap&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Makefile Application.all">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" singleton="false" PROGRAM_PARAMS="&quot;11 23 3&quot; 312 34 334 &quot; 9312 2 &quot;2032" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="push_swap" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/push_swap">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bonus" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="push_swap" TARGET_NAME="bonus" CONFIG_NAME="bonus" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="compile" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="push_swap" TARGET_NAME="compile" CONFIG_NAME="compile" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fclean" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="push_swap" TARGET_NAME="fclean" CONFIG_NAME="fclean" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="norminette" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="push_swap" TARGET_NAME="norminette" CONFIG_NAME="norminette" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="push_swap" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="push_swap" TARGET_NAME="push_swap" CONFIG_NAME="push_swap" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="re" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="&quot;11 23 3&quot; 312 34 334 &quot; 9312 2 &quot;2032" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="push_swap" TARGET_NAME="re" CONFIG_NAME="re" version="1" RUN_PATH="$PROJECT_DIR$/push_swap">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="clean" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="clean" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="re" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="re" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="t" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="all" workingDirectory="" arguments="&quot;11 23 3&quot; 312 34 334 &quot; 9312 2 &quot;2032">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Makefile Application.bonus" />
+      <item itemvalue="Makefile Application.compile" />
+      <item itemvalue="Makefile Application.fclean" />
+      <item itemvalue="Makefile Application.norminette" />
+      <item itemvalue="Makefile Application.push_swap" />
+      <item itemvalue="Makefile Application.re" />
+      <item itemvalue="Makefile Application.all" />
+      <item itemvalue="Makefile Target.t" />
+      <item itemvalue="Makefile Target.clean" />
+      <item itemvalue="Makefile Target.re" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.re" />
+        <item itemvalue="Makefile Target.clean" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7db53034-54c2-45d7-93f4-e16b581d6846" name="Changes" comment="" />
+      <created>1651679645278</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651679645278</updated>
+      <workItem from="1651679647269" duration="6125000" />
+      <workItem from="1651745193514" duration="3640000" />
+      <workItem from="1651758243896" duration="3000" />
+      <workItem from="1651833944244" duration="3733000" />
+      <workItem from="1651840077197" duration="3074000" />
+      <workItem from="1651843201796" duration="154000" />
+      <workItem from="1651843366700" duration="806000" />
+      <workItem from="1651844183015" duration="29000" />
+      <workItem from="1651844220983" duration="23000" />
+      <workItem from="1651844253124" duration="155000" />
+      <workItem from="1651844418216" duration="66000" />
+      <workItem from="1651844493456" duration="1094000" />
+      <workItem from="1651845626161" duration="67000" />
+      <workItem from="1651845702761" duration="476000" />
+      <workItem from="1651846319458" duration="111000" />
+      <workItem from="1651846844438" duration="10000" />
+      <workItem from="1651848491053" duration="2588000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Source/main.c</url>
+          <line>31</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Source/args_alignment.c</url>
+          <line>39</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Source/list2.c</url>
+          <line>48</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Source/list2.c</url>
+          <line>14</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
