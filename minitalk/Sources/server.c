@@ -1,74 +1,62 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: odursun <odursun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 13:06:02 by odursun           #+#    #+#             */
-/*   Updated: 2022/02/16 13:49:33 by odursun          ###   ########.fr       */
+/*   Created: 2022/02/14 13:06:12 by odursun           #+#    #+#             */
+/*   Updated: 2022/03/26 19:45:00 by odursun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Include/minitalk.h"
 
-void	server_receive(int binary)
+void	ft_kill(t_list *pid)
 {
-	static int					bit = 0;
-	static unsigned char		letter = 0;
+	int		i;
+	char	c;
 
-	letter += ((binary & 1) << bit++);
-	if (bit == 7)
+	while (*pid->str)
 	{
-		write(1, &letter, 1);
-		if (!letter)
-			write(1, "\n", 1);
-		letter = 0;
-		bit = 0;
-	}
-	return ;
-}
-
-void	server_loop(t_list *talk)
-{
-	while (42)
-	{
-		if ((signal(SIGUSR1, server_receive) == SIG_ERR)
-			|| (signal(SIGUSR2, server_receive) == SIG_ERR))
+		i = 8;
+		c = *pid->str++;
+		while (i--)
 		{
-			ft_putstr("[1;31m[ERROR]: SIGNAL ERROR!!!\n\e[0m");
-			free(talk);
-			talk = NULL;
-			exit(EXIT_FAILURE);
+			if (c >> i & 1)
+				kill(pid->pid_server, SIGUSR1);
+			else
+				kill(pid->pid_server, SIGUSR2);
+			usleep(100);
 		}
-		pause();
 	}
-	return ;
+	i = 8;
+	while (i--)
+	{
+		kill(pid->pid_server, SIGUSR2);
+		usleep(100);
+	}
 }
 
-int	main(int ac, char *av[])
+int	main(int argc, char **argv)
 {
-	t_list	*talk;
+	t_list	talk;
 
-	(void)av;
-	talk = NULL;
-	if (ac != 1)
+	if (argc != 3)
 	{
-		ft_putstr("\e[1;31m[ERROR]: ./server sadece 1 argüman.\n\e[0m");
+		ft_putstr("\e[1;31m[ERROR]: Use ./server sadece 3 argüman!!!\n\e[0m");
 		exit(EXIT_FAILURE);
 	}
 	else
 	{
-		talk = malloc(sizeof(t_list));
-		if (!talk)
+		talk.pid_server = ft_atoi(argv[1]);
+		talk.str = argv[2];
+		if (talk.pid_server <= 0)
+		{
+			ft_putstr("[\e[1;31m[ERROR]: PID is 0'a eşit veya küçük.\n\e[0m");
 			exit(EXIT_FAILURE);
-		talk->pid_server = getpid();
-		ft_putstr("\e[1;32m[SUCCESS]\e[0m\n\e[0;31mServer ready!\nPID: \e[0m");
-		ft_putnbr(talk->pid_server);
-		write(1, "\n", 1);
-		server_loop(talk);
+		}
+		ft_kill(&talk);
 	}
-	free(talk);
-	talk = NULL;
 	return (0);
 }

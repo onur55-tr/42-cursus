@@ -6,74 +6,57 @@
 /*   By: odursun <odursun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 13:06:12 by odursun           #+#    #+#             */
-/*   Updated: 2022/02/16 13:28:43 by odursun          ###   ########.fr       */
+/*   Updated: 2022/03/26 19:45:00 by odursun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Include/minitalk.h"
 
-t_list	*client_initiate(void)
+void	ft_kill(t_list *pid)
 {
-	t_list	*talk;
+	int		i;
+	char	c;
 
-	talk = malloc(sizeof(t_list));
-	if (!talk)
+	while (*pid->str)
 	{
-		ft_putstr("\e[1;31m[ERROR]: Malloc() oluşturma hatası.\n\e[0m");
-		exit(EXIT_FAILURE);
-	}
-	talk->pid_server = 0;
-	return (talk);
-}
-
-void	client_send(t_list *talk, unsigned char *mess)
-{
-	int		idx;
-	int		bit;
-	int		signal;
-
-	idx = -1;
-	while (++idx <= ft_strlen((char *)mess))
-	{
-		bit = -1;
-		signal = 0;
-		while (++bit < 7)
+		i = 8;
+		c = *pid->str++;
+		while (i--)
 		{
-			if ((mess[idx] >> bit) & 1)
-				signal = SIGUSR2;
+			if (c >> i & 1)
+				kill(pid->pid_server, SIGUSR1);
 			else
-				signal = SIGUSR1;
-			kill(talk->pid_server, signal);
+				kill(pid->pid_server, SIGUSR2);
 			usleep(100);
 		}
 	}
-	return ;
+	i = 8;
+	while (i--)
+	{
+		kill(pid->pid_server, SIGUSR2);
+		usleep(100);
+	}
 }
 
-int	main(int ac, char *av[])
+int	main(int argc, char **argv)
 {
-	t_list	*talk;
+	t_list	talk;
 
-	talk = NULL;
-	if (ac != 3)
+	if (argc != 3)
 	{
 		ft_putstr("\e[1;31m[ERROR]: Use ./server sadece 3 argüman!!!\n\e[0m");
 		exit(EXIT_FAILURE);
 	}
 	else
 	{
-		talk = client_initiate();
-		talk->pid_server = ft_atoi(av[1]);
-		if (talk->pid_server <= 0)
+		talk.pid_server = ft_atoi(argv[1]);
+		talk.str = argv[2];
+		if (talk.pid_server <= 0)
 		{
 			ft_putstr("[\e[1;31m[ERROR]: PID is 0'a eşit veya küçük.\n\e[0m");
-			free(talk);
-			talk = NULL;
 			exit(EXIT_FAILURE);
 		}
-		client_send(talk, (unsigned char *)av[2]);
+		ft_kill(&talk);
 	}
-	free(talk);
-	talk = NULL;
 	return (0);
 }
