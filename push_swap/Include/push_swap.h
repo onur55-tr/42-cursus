@@ -22,7 +22,11 @@ typedef struct s_swap
 {
 	int	*array;
 	int	size;
+<<<<<<< HEAD
 	int	stack;
+=======
+	int	type;
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 }	t_swap;
 
 void	two_args(char *s, t_swap *a, t_swap *b);
@@ -44,6 +48,9 @@ void	rev_rotate(t_swap *data, int control);
 void	rotate_together(t_swap *a, t_swap *b, int control);
 void	rev_rotate_together(t_swap *a, t_swap *b, int control);
 void	swap_together(t_swap *a, t_swap *b, int control);
+<<<<<<< HEAD
 void	indexing(t_swap *a);
 int		*sort_before(t_swap *a);
+=======
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 #endif

@@ -55,6 +55,45 @@ void	two_args(char *s, t_swap *a, t_swap *b)
 	}
 }
 
+<<<<<<< HEAD
+=======
+//argümanın 2 den fazla gelme durumu
+void	more_args(int argc, char **argv, t_swap *a, t_swap *b)
+{
+	char	**new_string;
+	char	*string;
+	char	*tmp;
+	int		i;
+
+	i = 0;
+	string = ft_strdup("");
+	while (++i < argc)
+	{
+		tmp = ft_strjoin(string, argv[i]);
+		free(string);
+		string = ft_strjoin(tmp, " ");
+		free(tmp);
+	}
+	new_string = ft_split(string, ' ');
+	for (int f = 0; new_string[f]; f++)
+		ft_printf("string->%s<-\n", new_string[f]);
+	free(string);
+	i = -1;
+	while (new_string[++i])
+		if (!number_count(new_string[i]))
+			exit(1);
+	for (int c = 0; new_string[c]; c++)
+		printf("new_String: ->%s<-\ni: ->%d<-\n", new_string[c], i);
+	a->size = i;
+	b->size = 0;
+	a->array = malloc(sizeof(int) * a->size);
+	b->array = malloc(sizeof(int) * a->size);
+	i = -1;
+	while (new_string[++i])
+	a->array[a->size - i - 1] = ft_atoim(new_string[i], a, b);
+}
+
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 //çift sayı kontrolü
 void	check_double(t_swap *a, t_swap *b)
 {
