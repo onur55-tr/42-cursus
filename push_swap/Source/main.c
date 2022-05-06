@@ -12,6 +12,8 @@
 
 #include "../Include/push_swap.h"
 
+<<<<<<< HEAD
+=======
 int	*sort_before(t_swap *a)
 {
 	int	i;
@@ -65,13 +67,19 @@ void	indexing(t_swap *a)
 	free (sort);
 }
 
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 int	main(int argc, char **argv)
 {
 	t_swap	a;
 	t_swap	b;
 
+<<<<<<< HEAD
+	a.stack = 'a';
+	b.stack = 'b';
+=======
 	a.type = 'a';
 	b.type = 'b';
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 	if (argc == 2)
 		two_args(argv[1], &a, &b);
 	else if (argc > 2 && argc <= 702)

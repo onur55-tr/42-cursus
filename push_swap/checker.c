@@ -87,8 +87,13 @@ int	main(int ac, char **av)
 	int		control;
 
 	control = -1;
+<<<<<<< HEAD
+	a.stack = 'a';
+	b.stack = 'b';
+=======
 	a.type = 'a';
 	b.type = 'b';
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 	if (ac == 2)
 		two_args(av[1], &a, &b);
 	else if (ac > 2 && ac <= 502)

@@ -55,6 +55,8 @@ void	two_args(char *s, t_swap *a, t_swap *b)
 	}
 }
 
+<<<<<<< HEAD
+=======
 //argümanın 2 den fazla gelme durumu
 void	more_args(int argc, char **argv, t_swap *a, t_swap *b)
 {
@@ -91,6 +93,7 @@ void	more_args(int argc, char **argv, t_swap *a, t_swap *b)
 	a->array[a->size - i - 1] = ft_atoim(new_string[i], a, b);
 }
 
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 //çift sayı kontrolü
 void	check_double(t_swap *a, t_swap *b)
 {

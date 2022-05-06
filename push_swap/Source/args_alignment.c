@@ -23,7 +23,11 @@ void	swap(t_swap *data, int control)
 	data->array[data->size - 2] = tmp;
 	if (!control)
 	{
+<<<<<<< HEAD
+		if (data->stack == 'a')
+=======
 		if (data->type == 'a')
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 			ft_printf("sa\n");
 		else
 			ft_printf("sb\n");
@@ -45,9 +49,15 @@ void	rotate(t_swap *data, int control)
 	data->array[0] = tmp;
 	if (!control)
 	{
+<<<<<<< HEAD
+		if (data->stack == 'a')
+			ft_printf("ra\n");
+		else if (data->stack == 'b')
+=======
 		if (data->type == 'a')
 			ft_printf("ra\n");
 		else if (data->type == 'b')
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 			ft_printf("rb\n");
 	}
 }
@@ -59,7 +69,11 @@ void	push(t_swap *data, t_swap *data1)
 	data1->array[data1->size] = data->array[data->size - 1];
 	data1->size += 1;
 	data->size -= 1;
+<<<<<<< HEAD
+	if (data->stack == 'a')
+=======
 	if (data->type == 'a')
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 		ft_printf("pb\n");
 	else
 		ft_printf("pa\n");
@@ -80,9 +94,15 @@ void	rev_rotate(t_swap *data, int control)
 	data->array[data->size - 1] = tmp;
 	if (!control)
 	{
+<<<<<<< HEAD
+		if (data->stack == 'a')
+			ft_printf("rra\n");
+		else if (data->stack == 'b')
+=======
 		if (data->type == 'a')
 			ft_printf("rra\n");
 		else if (data->type == 'b')
+>>>>>>> 93a9c08c324acc54e8d16ede06f0b58fa5f58599
 			ft_printf("rrb\n");
 	}
 }
