@@ -32,6 +32,5 @@ int	main(int argc, char **argv)
 		smaller_list(&a, &b);
 	free(a.array);
 	free(b.array);
-	system("leaks push_swap");
 	return (0);
 }
