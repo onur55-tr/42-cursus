@@ -4,3 +4,6 @@
 [submodule "Libft"]
 	path = Libft
 	url = https://github.com/onur55-tr/Libft.git
+[submodule "Gnl"]
+	path = Gnl
+	url = https://github.com/onur55-tr/Gnl.git
