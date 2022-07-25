@@ -6,7 +6,7 @@
 /*   By: odursun <odursun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 16:33:40 by odursun           #+#    #+#             */
-/*   Updated: 2022/01/10 17:53:22 by odursun          ###   ########.fr       */
+/*   Updated: 2022/05/06 18:47:59 by odursun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,3 @@ char	**ft_split(char const *s, char c)
 	buff[i] = 0;
 	return (buff);
 }
-

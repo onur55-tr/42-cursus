@@ -26,11 +26,15 @@ OBJS_BONUS 		= $(BONUS:.c=.o)
 
 OBJS			= $(SRCS:.c=.o)
 
-CC				= @gcc
+PRINTF 			= LC_NUMERIC="en_US.UTF-8" printf
+IGREEN			= \033[0;92m
+RESET		=	\033[0m
 
-RM				= @rm -f
+CC			= @gcc
 
-CFLAGS			= -Wall -Wextra -Werror -I.
+RM			= @rm -f
+
+CFLAGS			= -Wall -Wextra -Werror
 
 NAME			= libft.a
 
@@ -39,10 +43,13 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				@ar rcs $(NAME) $(OBJS)
 				@echo ➤ arşivleme işlemi başlatılıyor...
+				@$(PRINTF) "➤ $(NAME)\033[0;92m is up to date!\033[0;39m\n"
 
 bonus:			$(OBJS) $(OBJS_BONUS)
 				@ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 				@echo ➤ b. arşivleme işlemi başlatılıyor...
+%.o: %.c
+				$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
 				$(RM) $(OBJS) $(OBJS_BONUS)
