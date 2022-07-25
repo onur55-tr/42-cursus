@@ -7,3 +7,6 @@
 [submodule "Gnl"]
 	path = Gnl
 	url = https://github.com/onur55-tr/Gnl.git
+[submodule "Printf"]
+	path = Printf
+	url = https://github.com/onur55-tr/Printf.git
